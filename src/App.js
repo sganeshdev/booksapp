@@ -1,7 +1,7 @@
 import React from "react";
 import "./styles/App.scss";
-import { Button } from "evergreen-ui";
-
+import { Button, Pane } from "evergreen-ui";
+import TextInput from "../src/components/TextInput";
 const AppContext = React.createContext();
 
 function Counter() {
@@ -27,6 +27,13 @@ function CounterButtons() {
   );
 }
 
+function Form() {
+  return (
+    <section>
+      <TextInput name="YourName" label="Enter your name" />
+    </section>
+  );
+}
 function App() {
   let [count, setCount] = React.useState(0);
   return (
@@ -42,6 +49,15 @@ function App() {
           <Counter />
           <CounterButtons />
         </section>
+        <Pane
+          className="form-pane"
+          background="tint1"
+          padding={24}
+          marginBottom={16}
+          marginTop={16}
+        >
+          <Form />
+        </Pane>
       </div>
     </AppContext.Provider>
   );

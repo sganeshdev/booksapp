@@ -34,3 +34,11 @@ code {
 .App-link {
   color: #09d3ac;
 }
+
+div.counter-button{
+  width: 200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

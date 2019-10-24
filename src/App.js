@@ -1,5 +1,6 @@
 import React from "react";
 import "./styles/App.scss";
+import { Button } from "evergreen-ui";
 
 const AppContext = React.createContext();
 
@@ -15,9 +16,13 @@ function Counter() {
 function CounterButtons() {
   let { increment, decrement } = React.useContext(AppContext);
   return (
-    <div>
-      <button onClick={increment}>+</button>
-      <button onClick={decrement}>-</button>
+    <div className="counter-button">
+      <Button appearance="primary" onClick={increment}>
+        Increment
+      </Button>
+      <Button appearance="primary" onClick={decrement}>
+        Decrement
+      </Button>
     </div>
   );
 }
